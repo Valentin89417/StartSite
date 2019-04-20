@@ -29,6 +29,11 @@ git clone https://github.com/Valentin89417/StartSite.git
 
 
 Работа.
+git status
+git add .
+git commit -m 'Cribs'
+git push
+
 
 *Отслеживаем состояние репозитория
 git status
@@ -39,7 +44,7 @@ git add .          (добавит все файлы)
 
 *Создаём коммит
 git commit –a
-git commit -m 'ferst'
+git commit -m 'Cribs'
 –a означает: добавить все изменения в индекс до передачи.
 -m : сообщение.
 кароткая запись:
