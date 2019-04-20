@@ -1,0 +1,60 @@
+Скачать Git с  https://gitforwindows.org/ 
+
+
+Вызвать подробное рукаводство
+$ git help commit   
+
+Базовая настройка Git
+git config --global user.name "Kanunnikov Valentin"
+git config --global user.email "89417@mail.ru"
+
+проверка настроек 
+git config --list
+или 
+git config user.name
+git config user.email
+
+
+Далее через консоль переходим в папку с новоиспеченным сайтом и инициализируем репозиторий.
+cd /d/Open_server/domains/git.loc/
+git init
+
+Определяем удалённый репозиторий для папки с сайтом (надо находится в папке с сайтом)
+git remote add origin https://github.com/Valentin89417/StartSite.git
+git push -u origin master
+
+
+Клонируем репозиторий
+git clone https://github.com/Valentin89417/StartSite.git
+
+
+Работа.
+
+*Отслеживаем состояние репозитория
+git status
+
+*Добавим файлы в репозиторий
+git add index.html (добавит html файл)
+git add .          (добавит все файлы)
+
+*Создаём коммит
+git commit –a
+git commit -m 'ferst'
+–a означает: добавить все изменения в индекс до передачи.
+-m : сообщение.
+кароткая запись:
+git commit –am "Cribs"
+
+*Отправить комит в удалённый репозиторий
+git push 
+
+
+*посмотреть ветки 
+git branch
+
+*Создание ветки
+git branch имя_ветки
+
+*Переключение на нужную ветку
+git checkout имя_ветки
+
