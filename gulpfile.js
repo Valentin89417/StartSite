@@ -1,4 +1,5 @@
 var gulp       = require('gulp'), // Подключаем Gulp
+	plumber 	 = require('gulp-plumber'), // Неразрывает связь при ошибке
 	sass         = require('gulp-sass'), //Подключаем Sass пакет,
 	browserSync  = require('browser-sync'), // Подключаем Browser Sync
 	concat       = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
@@ -13,6 +14,7 @@ var gulp       = require('gulp'), // Подключаем Gulp
 
 gulp.task('sass', function(){ // Создаем таск Sass
 	return gulp.src('app/sass/**/*.+(sass|scss|css)') // Берем источник
+		.pipe(plumber()) // перехват ошибок.
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
 		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
 		.pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
