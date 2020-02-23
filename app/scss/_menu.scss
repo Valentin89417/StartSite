@@ -1,0 +1,60 @@
+// Анимация гамбургер
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#000;
+    stroke-width:5.5;
+    stroke-linecap:round;
+}
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    .top {
+        stroke-dasharray: 40 121;
+    }
+    .bottom {
+        stroke-dasharray: 40 121;
+    }
+    &.active{
+        .top {
+            stroke-dashoffset: -68px;
+        }
+        .bottom {
+            stroke-dashoffset: -68px;
+        }
+    }
+}
+
+// выподающbq блок
+#topMenu_block{
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -1000px;
+    transition: .5s cubic-bezier(0, 0, 0.2, 1);
+    &.active{
+        top: 69px;
+        z-index: 10;
+    }
+    li{
+        list-style-type: none;
+        padding: 10px 30px;
+    }
+}
+header{
+    border-bottom: 1px solid #ccc;
+    z-index: 15;
+    .col-4{
+        z-index: 15;
+    
+    }
+}

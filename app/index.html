@@ -1,52 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<title>Тестовое задание</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Тестовое задание для компании Редсофт">
 
-		<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-		<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
-		<link rel="apple-touch-icon-precomposed" href="img/favicon/apple-touch-icon-precomposed.png">
+<head>
 
-		<link rel="stylesheet" type="text/css" href="css/mystyle.min.css"/>
-		<!-- Временные файлы (при выгрузке перенести в mystyle.min.css)-->
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<link rel="stylesheet" type="text/css" href="css/media.css"/>
-		<!-- END Временные файлы -->
-	</head>
-	<body>
-		<header class="header">
-			<nav id="menu">
-				<ul>
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-				</ul>
-			</nav>
-		</header>
-		<main id="content">
-			<div class="container">
-				<div class="row  text-center">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<h1>Привет я твой Сайт</h1>
-						<p  class="text-bold">Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации модели развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа направлений прогрессивного развития.</p>
-					</div>
-				</div>
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>StartSite</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+		<header class="header container-fluid">
+			<div class="row menu-wrap flex-nowrap justify-content-between align-items-center">
+			  <div class="col-4">
+				<a class="text-muted" href="#" id="topMenu">
+					<svg class="ham hamRotate" viewBox="0 0 100 100" width="60">
+						<path class="line top"
+							d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+						<path class="line middle"
+							d="m 70,50 h -40" />
+						<path class="line bottom"
+							d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+				    </svg>
+				</a>
+			  </div>
+			  <div class="col-4 text-center">
+				<a class="blog-header-logo text-dark" href="#">LOGO</a>
+			  </div>
+			  <div class="col-4 d-flex justify-content-end align-items-center">
+				<a class="text-muted" href="#">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</a>
+			  </div>
 			</div>
-		</main>
-		<aside id="sidebar">
+		</header>
+		<div id="topMenu_block" class>
+			<ul class="d-flex justify-content-around m-0">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
 
-		</aside>
-		<footer class="container-fluid" id="footer">
+	<img class="img-responsive"
+	src="https://wikiway.com/upload/resize_cache/iblock/cef/1920_1000_2/Gruziya.jpg"
+	alt="Start HTML5 Template">
+	<!-- Custom HTML -->
 
-		</footer>
-		<script src="js/libs.min.js"></script>
-		<!-- Временные файлы (при выгрузке перенести в libs.min.js)-->
-		<script src="js/my.js"></script>
-		<!-- END Временные файлы -->
-	</body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<br>
+				<h1>Test Site</h1>
+				<img class="img-responsive"
+				src="img/@1x/preview.jpg"
+				srcset="img/@1x/preview.jpg 1x, img/@2x/preview.jpg 2x"
+				alt="Start HTML5 Template">
+			</div>
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
 </html>

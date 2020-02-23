@@ -1,5 +1,8 @@
-package-lock.json
-node_modules/
-.node_modules/
-idea/
-.idea/
+/node_modules/
+/dist/
+/.git/
+/app/css/
+/**/_backstage
+/**/package-lock.json
+/**/Thumbs.db
+/**/*.DS_Store
