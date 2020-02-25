@@ -45,8 +45,9 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery-3.2.1.slim.min.js',
-		'app/libs/bootstrap/js/popper.min.js',
-		'app/libs/bootstrap/js/bootstrap.min.js',
+		//'app/libs/bootstrap/js/popper.min.js',
+		//'app/libs/bootstrap/js/bootstrap.min.js',
+		'app/libs/basicScroll/basicScroll.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
