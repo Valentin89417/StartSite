@@ -1,77 +1,62 @@
-# StartSite Привет друг))
-Сборка для быстрого старта вёрстки Сайта.
-Включает Настроеный Gulp для работы с Scss
+# Сборка проекта на Gulp 4
+Быстро настроить сборку вашего проекта на Gulp и писать код на:
+- HTML
+- CSS, SCSS, 
+- Java Script, jQuery v3.5.1
+- Bootstrap v4.6.2
 
-Клонируем репозиторий
-git clone https://github.com/Valentin89417/StartSite.git
+## Функционал сборки
+- компиляция препроцессоров SASS
+- минификация CSS
+- автоматическое добавление префиксов CSS
+- преобразования кода ECMAScript 2015 + в обратно совместимую версию JavaScript с помощью Babel
+- минификация JavaScript
+- объединение нескольких файлов JavaScript в один
+- сжатие изображений
+- отслеживание новых изображений, которые еще не были сжаты
+- отслеживание изменений в файлах и автоматический запуск повторной обработки
+- генерация sourcemaps
+- отображение размеров файлов в терминале
 
-при первом запуске: 
-1)устоновить nodejs: https://nodejs.org/en/
-npm install --global gulp-cli
+## Input
+|| HTML | Styles | Scripts | Images |
+|:---|:------:|:-----:|:----:|:-----:|
+| **Каталог** | / | src/styles/ | src/scripts/ | src/img/ |
+| **Расширение** | .html | .css, .sass, .scss | .js | .jpg, .png, .gif, .svg |
+
+## Output
+|| HTML | CSS | JavaScript | Images |
+|:---|:------:|:-----:|:----:|:-----:|
+| **Путь** | dist/ | dist/css/main.min.css | dist/js/main.min.js | dist/images/ |
+
+## Зупуск:  
+1. Скачать все файлы проекта  
+2. В терминале перейти в каталог проекта  
+3. Выполнить команду: npm i (должен быть установлен node.js)  
+4. Создать каталоги и файлы
+5. Выполнить команду: gulp (запуск таска default)  
+6. Писать свой код и наслаждаться автоматической сборкой проекта. 
+
+## Используемые NPM пакеты
+[gulp](https://www.npmjs.com/package/gulp) Сборщик Gulp  
+[sass](https://www.npmjs.com/package/sass) Компилятор Sass  
+[gulp-sass](https://www.npmjs.com/package/gulp-sass) Компиляция Sass и Scss файлов  
+[gulp-uglify](https://www.npmjs.com/package/gulp-uglify) Сжатие и оптимизация Java Script кода  
+[gulp-babel](https://www.npmjs.com/package/gulp-babel) Преобразует Java Script в старый стандарт  
+[@babel/core](https://www.npmjs.com/package/@babel/core) Ядро Babel  
+[@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env) Пресет для компиляции Babel  
+[gulp-clean-css](https://www.npmjs.com/package/gulp-clean-css) Минификация и оптимизация CSS файлов   
+[del](https://www.npmjs.com/package/del) Удаление каталогов и файлов  
+[gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps) Карта строк кода для инструментов  разработчика   
+[gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) Автоматическое добавление префиксов в CSS   
+[gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin) Сжатие изображений   
+[gulp-concat](https://www.npmjs.com/package/gulp-concat) Объединение нескольких файлов в один  
+[gulp-newer](https://www.npmjs.com/package/gulp-newer) Отслеживание только новых файлов  
+[gulp-rename](https://www.npmjs.com/package/gulp-rename) Переименовывает файлы    
+[gulp-size](https://www.npmjs.com/package/gulp-size) Отображение информации о размерах файлов в терминале  
 
 
-Для установки Gulp в проект дожны быть файлы:
-1) package.json
-2) gulpfile.js
-
-проверяем обовления плагина: ncu
-для загрузки необходимых файлов:  npm i
-
-Настройка Gulp:
-Вся настройка происходит в файле gulpfile.js после установки плагинов.
-Плагины искать здесь:  https://gulpjs.com/plugins/
-локальной установки плагина: npm install --save-dev (Имя_плагина)
-
-
-Установка старонних Библиотек:
-https://bower.io/ также требует установленого Git
-в файле .bowerrc - указываем путь куда будут сохранятся библиотеки
-Команда для загрузки: bower i имя_библиотеки
-
-
-Bootstrap 4: https://bootstrap-4.ru/docs/4.0/getting-started/introduction/
-Иконки смотреть: https://fontawesome.ru/all-icons/
-
-
-------------------------------------------------------------------------------
-//Работа с GitHub
-
-git status
-git add .
-git commit -m 'Cribs'
-git push
-
-
-//Отслеживаем состояние репозитория
-git status
-
-//Добавим файлы в репозиторий
-git add index.html (добавит html файл)
-git add .          (добавит все файлы)
-
-//Создаём коммит
-git commit –am "Cribs"
-–a означает: добавить все изменения в индекс до передачи.
--m : сообщение.
-
-//Отправить комит в удалённый репозиторий
-git push 
-
-//посмотреть ветки 
-git branch
-
-//Создание ветки
-git branch имя_ветки
-
-//Переключение на нужную ветку
-git checkout имя_ветки
-
-//Базовая настройка Git
-git config --global user.name "-Name-"
-git config --global user.email "-Email-"
-
-//проверка настроек 
-git config --list
-//или 
-git config user.name
-git config user.email
+### Контакты
+[![Telegram](https://img.shields.io/badge/-Telegram-333?style=for-the-badge&logo=telegram&logoColor=27A0D9)](https://t.me/kv89417)
+[![VK](https://img.shields.io/badge/-VK-333?style=for-the-badge&logo=Vk&logoColor=27A0D9)](https://vk.com/valentin_tin_tin)
+[![GitHub](https://img.shields.io/badge/-GitHub-333?style=for-the-badge&logo=GitHub&logoColor=fff)](https://github.com/Valentin89417)
