@@ -27,7 +27,7 @@
 ## Output
 || HTML | CSS | JavaScript | Images |
 |:---|:------:|:-----:|:----:|:-----:|
-| **Путь** | dist/ | dist/css/main.min.css | dist/js/main.min.js | dist/images/ |
+| **Путь** | / | dist/css/main.min.css | dist/js/main.min.js | dist/images/ |
 
 ## Зупуск:  
 1. Скачать все файлы проекта  
