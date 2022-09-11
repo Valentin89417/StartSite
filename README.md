@@ -21,7 +21,7 @@
 ## Input
 || HTML | Styles | Scripts | Images | Source |
 |:---|:------:|:-----:|:----:|:-----:|:-----:|
-| **Каталог** | / | src/styles/ | src/scripts/ | src/img/ | | src/sourse/ |
+| **Каталог** | / | src/styles/ | src/scripts/ | src/img/ | src/sourse/ |
 | **Расширение** | .html | .css, .sass, .scss | .js | .jpg, .png, .gif, .svg | любые файлы |
 
 ## Output
