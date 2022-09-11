@@ -2,8 +2,8 @@
 Быстро настроить сборку вашего проекта на Gulp и писать код на:
 - HTML
 - CSS, SCSS, 
-- Java Script, jQuery v3.5.1
-- Bootstrap v4.6.2
+- JS, jQuery v3.5
+- Bootstrap v4.6
 
 ## Функционал сборки
 - компиляция препроцессоров SASS
@@ -19,23 +19,24 @@
 - отображение размеров файлов в терминале
 
 ## Input
-|| HTML | Styles | Scripts | Images |
-|:---|:------:|:-----:|:----:|:-----:|
-| **Каталог** | / | src/styles/ | src/scripts/ | src/img/ |
-| **Расширение** | .html | .css, .sass, .scss | .js | .jpg, .png, .gif, .svg |
+|| HTML | Styles | Scripts | Images | Source |
+|:---|:------:|:-----:|:----:|:-----:|:-----:|
+| **Каталог** | / | src/styles/ | src/scripts/ | src/img/ | | src/sourse/ |
+| **Расширение** | .html | .css, .sass, .scss | .js | .jpg, .png, .gif, .svg | любые файлы |
 
 ## Output
-|| HTML | CSS | JavaScript | Images |
-|:---|:------:|:-----:|:----:|:-----:|
-| **Путь** | / | dist/css/main.min.css | dist/js/main.min.js | dist/images/ |
+|| HTML | CSS | JavaScript | Images | Source |
+|:---|:------:|:-----:|:----:|:-----:|:-----:|
+| **Путь** | / | assets/css/main.min.css | assets/js/main.min.js | assets/images/ | assets/sourse/ |
 
 ## Зупуск:  
 1. Скачать все файлы проекта  
 2. В терминале перейти в каталог проекта  
-3. Выполнить команду: npm i (должен быть установлен node.js)  
-4. Создать каталоги и файлы
-5. Выполнить команду: gulp (запуск таска default)  
-6. Писать свой код и наслаждаться автоматической сборкой проекта. 
+3. Выполнить команду: npm i (должен быть установлен node.js )
+4. Выполнить команду: npm install --global gulp-cli (установить gulp глобально, если установлен пропустить команду)  
+5. Создать каталоги и файлы  
+6. Выполнить команду: gulp (запуск таска default)  
+7. Писать свой код и наслаждаться автоматической сборкой проекта. 
 
 ## Используемые NPM пакеты
 [gulp](https://www.npmjs.com/package/gulp) Сборщик Gulp  

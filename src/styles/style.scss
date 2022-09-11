@@ -1,12 +1,12 @@
 @import url("_head.scss");
 
-
-.site-header {
-    background-color: rgba(0, 0, 0, .85);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
+.logo{
+    margin-top: -5px;
 }
-.site-header a {
-    color: #999;
-    transition: ease-in-out color .15s;
+header .menu-area{
+    position: static;
+}
+header .mega-area{
+    padding: 15px;
+    margin-top: 10px;
 }

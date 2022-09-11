@@ -23,18 +23,21 @@ const paths = {
     },
     styles: {
         src: 'src/styles/style.scss',
-        dest: 'dist/css/'
+        dest: 'assets/css/'
     },
     scripts: {
         src: 'src/scripts/**/*.js',
-        dest: 'dist/js/'
+        dest: 'assets/js/'
     },
     images: {
         src: 'src/img/*',
-        dest: 'dist/images'
+        dest: 'assets/images'
+    },
+    source: {
+        src: 'src/source/**',
+        dest: 'assets/source'
     }
 }
-
 
 function styles() {
     return gulp.src(paths.styles.src)
@@ -95,25 +98,37 @@ function images() {
         .pipe(gulp.dest(paths.images.dest))
 }
 
+function source() {
+    return gulp.src(paths.source.src)
+        .pipe(newer(paths.source.dest))
+        .pipe(gsize({
+            title:'source',
+            uncompressed:true
+        }))
+        .pipe(gulp.dest(paths.source.dest))
+}
+
 function clean() {
-    return del(['dist/*','!dist/images'])
+    return del(['assets/*','!assets/images','!assets/source'])
 }
 
 function watch() {
     gulp.watch(paths.watch.styles, styles)
     gulp.watch(paths.watch.scripts, scripts)
     gulp.watch(paths.watch.images, images)
+    gulp.watch(paths.watch.images, source)
 }
 
 const build = gulp.series(
     clean,
-    gulp.parallel(styles,scripts,images),
+    gulp.parallel(styles,scripts,images,source),
     watch)
 
 exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
+exports.images = source;
 exports.watch = watch;
 exports.build = build;
 exports.default = build;
