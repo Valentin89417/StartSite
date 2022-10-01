@@ -1,5 +1,6 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')(require('sass')); // обработчик sass
+const less = require('gulp-less'); // обработчик less
 const cleanCSS = require('gulp-clean-css') // минифицировать CSS
 const autoprefixer = require('gulp-autoprefixer')// Добавить префиксы
 
@@ -15,14 +16,19 @@ const rename = require('gulp-rename') // переименовывать файл
 const del = require('del') // удалять файлы
 const gsize = require('gulp-size') // показать в консоли размер файла
 
+const browserSync = require('browser-sync').create();
+
 const paths = {
     watch: {
-        styles:  ['src/styles/**/*.scss','src/styles/**/*.sass'],
+        styles:  ['src/styles/**/*.less','src/styles/**/*.css'],
         scripts: 'src/scripts/**/*.js',
-        images:  'src/img/**'
+        images:  'src/img/**',
+        source:  'src/source/**',
+        fonts:   'src/fonts/**',
+        html:  '*.html'
     },
     styles: {
-        src: 'src/styles/style.scss',
+        src: 'src/styles/style.less',
         dest: 'assets/css/'
     },
     scripts: {
@@ -36,21 +42,27 @@ const paths = {
     source: {
         src: 'src/source/**',
         dest: 'assets/source'
+    },
+    fonts: {
+        src: 'src/fonts/**',
+        dest: 'assets/fonts'
     }
 }
 
 function styles() {
     return gulp.src(paths.styles.src)
         .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
+        //.pipe(sass().on('error', sass.logError))
+        .pipe(less())
         .pipe(autoprefixer({
             cascade: false
         }))
+        .pipe(gulp.dest(paths.styles.dest))
         .pipe(cleanCSS({
             level: 2
         }))
         .pipe(rename({
-            basename: 'main',
+            basename: 'style',
             suffix: '.min'
         }))
         .pipe(sourcemaps.write('.'))
@@ -59,6 +71,7 @@ function styles() {
             showFiles:true
         }))
         .pipe(gulp.dest(paths.styles.dest))
+        .pipe(browserSync.stream())
 }
 
 function scripts() {
@@ -67,6 +80,7 @@ function scripts() {
         .pipe(babel({
             presets: ['@babel/env']
         }))
+        .pipe(gulp.dest(paths.scripts.dest))
         .pipe(uglify())
         .pipe(concat('main.min.js'))
         .pipe(sourcemaps.write('.'))
@@ -75,6 +89,7 @@ function scripts() {
             showFiles:true
         }))
         .pipe(gulp.dest(paths.scripts.dest))
+        .pipe(browserSync.stream())
 }
 
 function images() {
@@ -96,39 +111,67 @@ function images() {
             uncompressed:true
         }))
         .pipe(gulp.dest(paths.images.dest))
+        .pipe(browserSync.stream())
 }
 
 function source() {
     return gulp.src(paths.source.src)
-        .pipe(newer(paths.source.dest))
         .pipe(gsize({
             title:'source',
             uncompressed:true
         }))
         .pipe(gulp.dest(paths.source.dest))
+        .pipe(browserSync.stream())
+}
+
+function fonts() {
+    return gulp.src(paths.fonts.src)
+        .pipe(gsize({
+            title:'fonts',
+            uncompressed:true
+        }))
+        .pipe(gulp.dest(paths.fonts.dest))
+        .pipe(browserSync.stream())
+}
+
+function html() {
+    return gulp.src(paths.watch.html)
+        .pipe(gsize({
+            title:'html'
+        }))
+        .pipe(browserSync.stream())
 }
 
 function clean() {
-    return del(['assets/*','!assets/images','!assets/source'])
+    return del(['assets/*','!assets/images','!assets/source','!assets/fonts'])
 }
 
 function watch() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
     gulp.watch(paths.watch.styles, styles)
     gulp.watch(paths.watch.scripts, scripts)
     gulp.watch(paths.watch.images, images)
-    gulp.watch(paths.watch.images, source)
+    gulp.watch(paths.watch.source, source)
+    gulp.watch(paths.watch.fonts, fonts)
+    gulp.watch(paths.watch.html, html)
 }
 
 const build = gulp.series(
     clean,
-    gulp.parallel(styles,scripts,images,source),
+    gulp.parallel(styles,scripts,images,source,fonts),
     watch)
 
 exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
-exports.images = source;
+exports.source = source;
+exports.fonts = fonts;
+exports.html = html;
 exports.watch = watch;
 exports.build = build;
 exports.default = build;

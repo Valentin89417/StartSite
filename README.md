@@ -1,11 +1,12 @@
 # Сборка проекта на Gulp 4
 Быстро настроить сборку вашего проекта на Gulp и писать код на:
 - HTML
-- CSS, SCSS, 
-- JS, jQuery v3.5
-- Bootstrap v4.6
+- CSS, SCSS, LESS
+- Java Script, jQuery v3.5.1
+- Bootstrap v4.6.2
 
 ## Функционал сборки
+- компиляция препроцессоров LESS
 - компиляция препроцессоров SASS
 - минификация CSS
 - автоматическое добавление префиксов CSS
@@ -19,27 +20,27 @@
 - отображение размеров файлов в терминале
 
 ## Input
-|| HTML | Styles | Scripts | Images | Source |
-|:---|:------:|:-----:|:----:|:-----:|:-----:|
-| **Каталог** | / | src/styles/ | src/scripts/ | src/img/ | src/sourse/ |
-| **Расширение** | .html | .css, .sass, .scss | .js | .jpg, .png, .gif, .svg | любые файлы |
+|| HTML | Styles | Scripts | Images | Fonts | Source |
+|:---|:------:|:-----:|:----:|:-----:|:-----:|:-----:|
+| **Каталог** | / | src/styles/ | src/scripts/ | src/img/ | src/fonts/ | src/source/ |
+| **Расширение** | .html | .css, .less, .sass, .scss | .js | .jpg, .png, .gif, .svg | .ttf, .woff, .woff2 | .* |
 
 ## Output
-|| HTML | CSS | JavaScript | Images | Source |
-|:---|:------:|:-----:|:----:|:-----:|:-----:|
-| **Путь** | / | assets/css/main.min.css | assets/js/main.min.js | assets/images/ | assets/sourse/ |
+|| HTML | CSS | JavaScript | Images | Fonts | Source |
+|:---|:------:|:-----:|:----:|:-----:|:-----:|:-----:|
+| **Путь** | / | assets/css/style.min.css | assets/js/ | assets/images/ | assets/fonts/ | assets/source/ |
 
 ## Зупуск:  
 1. Скачать все файлы проекта  
 2. В терминале перейти в каталог проекта  
-3. Выполнить команду: npm i (должен быть установлен node.js )
-4. Выполнить команду: npm install --global gulp-cli (установить gulp глобально, если установлен пропустить команду)  
-5. Создать каталоги и файлы  
-6. Выполнить команду: gulp (запуск таска default)  
-7. Писать свой код и наслаждаться автоматической сборкой проекта. 
+3. Выполнить команду: npm i (должен быть установлен node.js)  
+4. Создать каталоги и файлы
+5. Выполнить команду: gulp (запуск таска default)  
+6. Писать свой код и наслаждаться автоматической сборкой проекта. 
 
 ## Используемые NPM пакеты
 [gulp](https://www.npmjs.com/package/gulp) Сборщик Gulp  
+[gulp-less](https://www.npmjs.com/package/gulp-less) Компиляция Less файлов  
 [sass](https://www.npmjs.com/package/sass) Компилятор Sass  
 [gulp-sass](https://www.npmjs.com/package/gulp-sass) Компиляция Sass и Scss файлов  
 [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) Сжатие и оптимизация Java Script кода  

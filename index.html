@@ -2,247 +2,297 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
 
-    <link rel="stylesheet" href="assets/source/bootstrap-v4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="/assets/source/bootstrap-v4/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/source/fancybox/fancybox.css">
+    <link rel="stylesheet" href="/assets/source/swiper/dist/css/swiper.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.min.css">
 
     <title>Document</title>
 </head>
 <body>
-    <div class="top-banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <img src="/assets/images/banner_1160x85.jpg" alt="top banner" class="w-100">
-                </div>
-            </div>
-        </div>
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="#">Features</a>
+            <a class="p-2 text-dark" href="#">Enterprise</a>
+            <a class="p-2 text-dark" href="#">Support</a>
+            <a class="p-2 text-dark" href="#">Pricing</a>
+        </nav>
+        <a class="btn btn-outline-primary" href="#" data-toggle="modal" data-target="#exampleModal">Sign up</a>
     </div>
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
-                        <a class="navbar-brand" href="#">
-                            <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
-                            Navbar
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                      
-                        <div class="collapse navbar-collapse" id="navbar">
-                          <ul class="navbar-nav ml-auto">                            
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">About</a>
-                            </li>                            
-                            <li class="nav-item dropdown menu-area">
-                              <a class="nav-link dropdown-toggle" href="#" id="mega-one" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Services
-                              </a>
-                              <div class="dropdown-menu mega-area" aria-labelledby="mega-one">
-                                <div class="row">
-                                    <div class="col-sm-6 col-lg-3">
-                                        <h5>Web Design</h5>
-                                        <a href="#" class="dropdown-item">HTML Template</a>
-                                        <a href="#" class="dropdown-item">Wordpress Template</a>
-                                        <a href="#" class="dropdown-item">Joomla Template</a>
-                                        <a href="#" class="dropdown-item">Blogger Template</a>
-                                    </div>
-                                    <div class="col-sm-6 col-lg-3">
-                                        <h5>Graphic Design</h5>
-                                        <a href="#" class="dropdown-item">Logo Design</a>
-                                        <a href="#" class="dropdown-item">Brouchure Design</a>
-                                        <a href="#" class="dropdown-item">Card Design</a>
-                                    </div>
-                                    <div class="col-sm-6 col-lg-3">
-                                        <h5>Company Profile</h5>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-                                    </div>
-                                    <div class="col-sm-6 col-lg-3">
-                                        <h5>Image</h5>
-                                        <img src="//unsplash.it/200/200" alt="">
-                                    </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="nav-item dropdown menu-area">
-                              <a class="nav-link dropdown-toggle" href="#" id="mega-two" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Portfolio
-                              </a>
-                              <div class="dropdown-menu mega-area" aria-labelledby="mega-two">
-                                <div class="row">                                    
-                                    <div class="col-sm-6 col-lg-3">
-                                        <h5>Marketplace</h5>
-                                        <a href="#" class="dropdown-item">Themeforest</a>
-                                        <a href="#" class="dropdown-item">Codester</a>
-                                        <a href="#" class="dropdown-item">Creative Market</a>
-                                        <a href="#" class="dropdown-item">Graphic River</a>
-                                    </div>
-                                    <div class="col-sm-6 col-lg-3">
-                                        <h5>It Consulting</h5>
-                                        <a href="#" class="dropdown-item">Why Consuting</a>
-                                        <a href="#" class="dropdown-item">Codester</a>
-                                        <a href="#" class="dropdown-item">Creative Market</a>
-                                    </div>  
-                                    <div class="col-sm-6 col-lg-3">
-                                        <h5>Tags</h5>
-                                        <p>
-                                            <span class="badge badge-secondary">Web Design</span>
-                                            <span class="badge badge-secondary">Graphic Design</span>
-                                            <span class="badge badge-secondary">Marketing</span>
-                                            <span class="badge badge-secondary">Consulting</span>
-                                            <span class="badge badge-secondary">Template</span>
-                                            <span class="badge badge-secondary">Joomla</span>
-                                            <span class="badge badge-secondary">Themeforest</span>
-                                            <span class="badge badge-secondary">Codester</span>
-                                        </p>
-                                    </div>                                  
-                                </div>
-                              </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="btn btn-outline-primary" href="#" data-toggle="modal" data-target="#exampleModal">Sign up</a>
-                            </li>
-                          </ul>                          
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Внимание!</strong> Вам следует проверить некоторые из этих полей.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <h1 class="display-4">Pricing</h1>
+        <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+    </div>
+
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+            <!-- Swiper || пример: https://swiperjs.com/demos -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- slaid1 -->
+                    <div class="swiper-slide">
+
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Free</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>10 users included</li>
+                                    <li>2 GB of storage</li>
+                                    <li>Email support</li>
+                                    <li>Help center access</li>
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-block btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Sign up for free</button>
+                            </div>
                         </div>
-                      </nav>
 
+                    </div>
+                    <!-- END slaid1 -->
+                    <!-- slaid2 -->
+                    <div class="swiper-slide">
+
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Pro</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>20 users included</li>
+                                    <li>10 GB of storage</li>
+                                    <li>Priority email support</li>
+                                    <li>Help center access</li>
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-block btn-primary" href="https://youtu.be/6VAbxqRaFPE" data-fancybox="video">Get started</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- END slaid2 -->
+                    <!-- slaid3 -->
+                    <div class="swiper-slide">
+
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Enterprise</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>30 users included</li>
+                                    <li>15 GB of storage</li>
+                                    <li>Phone and email support</li>
+                                    <li>Help center access</li>
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-block btn-primary" href="/assets/images/banner_1160x85.jpg" data-fancybox="foto2">Contact us</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- END slaid3 -->
+                    <!-- slaid4 -->
+                    <div class="swiper-slide">
+
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Free</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>10 users included</li>
+                                    <li>2 GB of storage</li>
+                                    <li>Email support</li>
+                                    <li>Help center access</li>
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- END slaid4 -->
+                    <!-- slaid5 -->
+                    <div class="swiper-slide">
+
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Pro</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>20 users included</li>
+                                    <li>10 GB of storage</li>
+                                    <li>Priority email support</li>
+                                    <li>Help center access</li>
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- END slaid5 -->
+                    <!-- slaid6 -->
+                    <div class="swiper-slide">
+
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Enterprise</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>30 users included</li>
+                                    <li>15 GB of storage</li>
+                                    <li>Phone and email support</li>
+                                    <li>Help center access</li>
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- END slaid6 -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination" style="bottom: auto;"></div>
+            </div>
+            <!-- END Swiper -->
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container pb-6">
+            <div class="row">
+                <div class="col footer__first">
+                    <div class="footer__tel">
+                        <a href="tel:+78612387210">
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 2.5C16.6778 2.95123 18.2076 3.83538 19.4361 5.06391C20.6646 6.29244 21.5488 7.82221 22 9.5" stroke="#44AF4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14 5.5C15.1984 5.8223 16.2911 6.45384 17.1686 7.33137C18.0462 8.20889 18.6777 9.30158 19 10.5" stroke="#44AF4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.28538 12.5783C8.27932 14.6103 9.92648 16.25 11.963 17.2347C12.112 17.3053 12.2768 17.3359 12.4413 17.3234C12.6057 17.311 12.764 17.256 12.9007 17.1637L15.8994 15.1642C16.032 15.0757 16.1846 15.0218 16.3433 15.0072C16.502 14.9926 16.6619 15.0179 16.8084 15.0806L22.4184 17.4849C22.6089 17.5659 22.768 17.7065 22.8717 17.8858C22.9754 18.065 23.018 18.2731 22.9931 18.4786C22.8158 19.8661 22.1388 21.1414 21.0889 22.0657C20.039 22.99 18.6883 23.4999 17.2895 23.5C12.9692 23.5 8.82595 21.7838 5.77108 18.7289C2.71621 15.674 1 11.5308 1 7.21051C1.00007 5.81174 1.51 4.46096 2.43429 3.41108C3.35858 2.36121 4.63387 1.68423 6.02135 1.50692C6.22691 1.48204 6.43497 1.52464 6.61421 1.6283C6.79345 1.73196 6.93414 1.89106 7.01509 2.08163L9.42145 7.69646C9.48369 7.84169 9.50905 8.00006 9.49527 8.15746C9.4815 8.31487 9.42901 8.46643 9.34248 8.59864L7.34984 11.6433C7.25915 11.7803 7.20554 11.9384 7.19424 12.1023C7.18294 12.2662 7.21434 12.4302 7.28538 12.5783V12.5783Z" stroke="#44AF4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            +7 861 238 72 10
+                        </a>
+                    </div>
+                    <p><strong>Пн-Вс: 9:00 - 20:00</strong></p>
+                    <p>Динской районст.<br>Старомышастовскаяул.<br>Красная 36-А<br>35 км от г. Краснодара</p>
+                    <div class="social-Links d-xl-none">
+                        <a href="https://www.youtube.com/channel/UCT2dbfcFuczRREB7v3lko_g" target="_blank" class="social-Links__item">
+                            <img src="/assets/images/youtube-green.svg" alt="youtube">
+                        </a>
+                        <a href="https://vk.com/familiadental" target="_blank" class="social-Links__item">
+                            <img src="/assets/images/vk-green.svg" alt="vk">
+                        </a>
+                        <a href="https://t.me/familia_dental" target="_blank" class="social-Links__item">
+                            <img src="/assets/images/dzen-green.svg" alt="dzen">
+                        </a>
+                        <a href="https://t.me/familia_dental" target="_blank" class="social-Links__item">
+                            <img src="/assets/images/telegram-green.svg" alt="telegram">
+                        </a>
+                    </div>
+                    <div class="footer__first_btn">
+                        <a class="btn btn-outline-success btn-circle" href="/assets/images/banner_1160x85.jpg" data-fancybox="foto">
+                             Построить маршрут
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-dark" href="#">О клинике</a></li>
+                        <li><a class="text-dark" href="#">Команда</a></li>
+                        <li><a class="text-dark" href="#">Стоимость</a></li>
+                        <li><a class="text-dark" href="#">Акции</a></li>
+                        <li><a class="text-dark" href="#">Отзывы</a></li>
+                        <li><a class="text-dark" href="#">Истории улыбок</a></li>
+                        <li><a class="text-dark" href="#">Иногродним</a></li>
+                        <li><a class="text-dark" href="#">Статьи</a></li>
+                        <li><a class="text-dark" href="#">Видео</a></li>
+                        <li><a class="text-dark" href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col footer__menu">
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-dark" href="#">Исправление прикуса</a></li>
+                        <li><a class="text-dark" href="#">Диагностика</a></li>
+                        <li><a class="text-dark" href="#">Хирургическая стоматология</a></li>
+                        <li><a class="text-dark" href="#">Сохранение зубов</a></li>
+                        <li><a class="text-dark" href="#">Профилактика и отбеливание</a></li>
+                        <li><a class="text-dark" href="#">Протезирование</a></li>
+                        <li><a class="text-dark" href="#">Имплантация</a></li>
+                        <li><a class="text-dark" href="#">Калькулятор имплантации</a></li>
+                    </ul>
+                </div>
+                <div class="col footer__menu2">
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-dark" href="#">Юридическая информация</a></li>
+                        <li><a class="text-dark" href="#">Лечение по ДМС</a></li>
+                        <li><a class="text-dark" href="#">Приглашение в “Клуб другей”</a></li>
+                        <li><a class="text-dark" href="#">Учебный центр</a></li>
+                        <li><a class="text-dark" href="#">Заявка на расчет лечения</a></li>
+                    </ul>
+                    <p><a class="btn btn-success btn-circle" href="#" data-toggle="modal" data-target="#exampleModal">Записаться на прием</a></p>
+                    <p><a class="btn btn-outline-success btn-circle" href="https://youtu.be/6VAbxqRaFPE" data-fancybox="laboratory_video">
+                         Спросить по WhatsApp</a></p>
                 </div>
             </div>
         </div>
-    </header>
-
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Внимание!</strong> Вам следует проверить некоторые из этих полей.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    <h1 class="display-4">Pricing</h1>
-    <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
-</div>
-
-<div class="container">
-    <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Free</h4>
-            </div>
-            <div class="card-body">
-                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li>10 users included</li>
-                    <li>2 GB of storage</li>
-                    <li>Email support</li>
-                    <li>Help center access</li>
-                </ul>
-                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
-            </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Pro</h4>
-            </div>
-            <div class="card-body">
-                <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li>20 users included</li>
-                    <li>10 GB of storage</li>
-                    <li>Priority email support</li>
-                    <li>Help center access</li>
-                </ul>
-                <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
-            </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Enterprise</h4>
-            </div>
-            <div class="card-body">
-                <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li>30 users included</li>
-                    <li>15 GB of storage</li>
-                    <li>Phone and email support</li>
-                    <li>Help center access</li>
-                </ul>
-                <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
-            </div>
-        </div>
-    </div>
-
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
-        <div class="row">
-            <div class="col-12 col-md">
-                <a class="mb-3 text-muted" href="/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
-                </a>
-                <small class="mb-3 text-muted">&copy; 2017-2018</small>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Features</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Cool stuff</a></li>
-                    <li><a class="text-muted" href="#">Random feature</a></li>
-                    <li><a class="text-muted" href="#">Team feature</a></li>
-                    <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                    <li><a class="text-muted" href="#">Another one</a></li>
-                    <li><a class="text-muted" href="#">Last time</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Resource</a></li>
-                    <li><a class="text-muted" href="#">Resource name</a></li>
-                    <li><a class="text-muted" href="#">Another resource</a></li>
-                    <li><a class="text-muted" href="#">Final resource</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Team</a></li>
-                    <li><a class="text-muted" href="#">Locations</a></li>
-                    <li><a class="text-muted" href="#">Privacy</a></li>
-                    <li><a class="text-muted" href="#">Terms</a></li>
-                </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <p>ООО "Краснодарский медицинский центр" © 2014-2022 | Лицензия предоставления медицинских услуг #34567890-456j<br>Все права защищены. При перепечатке материалов ссылка на сайт обязательна.<br>Информация на сайте не является публичной офертой.</p>
+                </div>
+                <div class="col-2">
+                    <div class="msf_top"  title="Наверх">
+                        <a href="#" id="scroll_top">
+                            ↑
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-</div>
 
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            Мой текст
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Мой текст
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="assets/source/jquery.slim.min.js"></script>
-<script src="assets/source/bootstrap-v4/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/main.min.js"></script>
+
+    <script src="assets/source/jquery.slim.min.js"></script>
+    <script src="assets/source/bootstrap-v4/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/source/fancybox/fancybox.umd.js"></script>
+    <script src="/assets/source/swiper/dist/js/swiper.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
 </body>
 </html>
