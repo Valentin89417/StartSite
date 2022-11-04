@@ -3,7 +3,10 @@
 - HTML
 - CSS, SCSS, LESS
 - Java Script, jQuery v3.5.1
-- Bootstrap v4.6.2
+- [Bootstrap v5.2.2](https://bootstrap-5.ru/docs/5.2/getting-started/introduction/)
+- [Иконки Bootstrap](https://icons.bootstrap-5.ru/)
+- [Fancybox](https://fancyapps.com/docs/ui/fancybox/)
+- [Swiper](https://swiperjs.com/)
 
 ## Функционал сборки
 - компиляция препроцессоров LESS

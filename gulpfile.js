@@ -1,6 +1,6 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')(require('sass')); // обработчик sass
-const less = require('gulp-less'); // обработчик less
+const less = require('gulp-less'); // обработчик sass
 const cleanCSS = require('gulp-clean-css') // минифицировать CSS
 const autoprefixer = require('gulp-autoprefixer')// Добавить префиксы
 
@@ -20,7 +20,7 @@ const browserSync = require('browser-sync').create();
 
 const paths = {
     watch: {
-        styles:  ['src/styles/**/*.less','src/styles/**/*.css'],
+        styles:  ['src/styles/**/*.less','src/styles/**/*.scss','src/styles/**/*.css'],
         scripts: 'src/scripts/**/*.js',
         images:  'src/img/**',
         source:  'src/source/**',
@@ -28,7 +28,7 @@ const paths = {
         html:  '*.html'
     },
     styles: {
-        src: 'src/styles/style.less',
+        src: 'src/styles/style.scss',
         dest: 'assets/css/'
     },
     scripts: {
@@ -52,8 +52,8 @@ const paths = {
 function styles() {
     return gulp.src(paths.styles.src)
         .pipe(sourcemaps.init())
-        //.pipe(sass().on('error', sass.logError))
-        .pipe(less())
+        .pipe(sass().on('error', sass.logError))
+        //.pipe(less())
         .pipe(autoprefixer({
             cascade: false
         }))
@@ -162,7 +162,8 @@ function watch() {
 
 const build = gulp.series(
     clean,
-    gulp.parallel(styles,scripts,images,source,fonts),
+    gulp.parallel(images,source,fonts),
+    gulp.parallel(styles,scripts),
     watch)
 
 exports.clean = clean;

@@ -1,12 +1,25 @@
-@import url("_head.scss");
+/* подключение шрифтов */
+@import url("../fonts/golostext/golostext.css");
 
-.logo{
-    margin-top: -5px;
-}
-header .menu-area{
-    position: static;
-}
-header .mega-area{
-    padding: 15px;
-    margin-top: 10px;
-}
+/* подключение Библиотек */
+@import "../source/bootstrap_v5/scss/bootstrap";
+@import url("../source/bootstrap-icons/font/bootstrap-icons.css");
+@import url("../source/fancybox/fancybox.css");
+@import url("../source/swiper/dist/css/swiper.min.css");
+
+
+/* подключение своих стилей */
+@import "_head";
+
+/* xs */
+// Нет необходимости в медиа-запросе для контрольной точки xs, так как это = `@media (min-width: 0) { ... }`
+@import "block/_1_header";
+@import "block/_16_footer";
+
+/* https://bootstrap-5.ru/docs/5.2/layout/breakpoints/
+ По максимуму писать стили в min-width
+ медиа запросы - Минимальная ширина @media (min-width: ... ) */
+@import "media_min/style";
+
+/* медиа запросы - Максимальная ширина @media (max-width: ... ) */
+@import "media_max/style";

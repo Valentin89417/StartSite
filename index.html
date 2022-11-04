@@ -3,296 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="/assets/source/bootstrap-v4/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/source/fancybox/fancybox.css">
-    <link rel="stylesheet" href="/assets/source/swiper/dist/css/swiper.min.css" />
-    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <meta name="description" content="Пример на bootstrap 5: Версия v5.2.2">
+    <title>Bootstrap · Версия v5.2.2</title>
 
-    <title>Document</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-        <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-        <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="#">Features</a>
-            <a class="p-2 text-dark" href="#">Enterprise</a>
-            <a class="p-2 text-dark" href="#">Support</a>
-            <a class="p-2 text-dark" href="#">Pricing</a>
-        </nav>
-        <a class="btn btn-outline-primary" href="#" data-toggle="modal" data-target="#exampleModal">Sign up</a>
-    </div>
+    <main>
 
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Внимание!</strong> Вам следует проверить некоторые из этих полей.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <h1 class="display-4">Pricing</h1>
-        <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
-    </div>
-
-    <div class="container">
-        <div class="card-deck mb-3 text-center">
-            <!-- Swiper || пример: https://swiperjs.com/demos -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <!-- slaid1 -->
-                    <div class="swiper-slide">
-
-                        <div class="card mb-4 box-shadow">
-                            <div class="card-header">
-                                <h4 class="my-0 font-weight-normal">Free</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-                                <ul class="list-unstyled mt-3 mb-4">
-                                    <li>10 users included</li>
-                                    <li>2 GB of storage</li>
-                                    <li>Email support</li>
-                                    <li>Help center access</li>
-                                </ul>
-                                <button type="button" class="btn btn-lg btn-block btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Sign up for free</button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- END slaid1 -->
-                    <!-- slaid2 -->
-                    <div class="swiper-slide">
-
-                        <div class="card mb-4 box-shadow">
-                            <div class="card-header">
-                                <h4 class="my-0 font-weight-normal">Pro</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-                                <ul class="list-unstyled mt-3 mb-4">
-                                    <li>20 users included</li>
-                                    <li>10 GB of storage</li>
-                                    <li>Priority email support</li>
-                                    <li>Help center access</li>
-                                </ul>
-                                <button type="button" class="btn btn-lg btn-block btn-primary" href="https://youtu.be/6VAbxqRaFPE" data-fancybox="video">Get started</button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- END slaid2 -->
-                    <!-- slaid3 -->
-                    <div class="swiper-slide">
-
-                        <div class="card mb-4 box-shadow">
-                            <div class="card-header">
-                                <h4 class="my-0 font-weight-normal">Enterprise</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
-                                <ul class="list-unstyled mt-3 mb-4">
-                                    <li>30 users included</li>
-                                    <li>15 GB of storage</li>
-                                    <li>Phone and email support</li>
-                                    <li>Help center access</li>
-                                </ul>
-                                <button type="button" class="btn btn-lg btn-block btn-primary" href="/assets/images/banner_1160x85.jpg" data-fancybox="foto2">Contact us</button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- END slaid3 -->
-                    <!-- slaid4 -->
-                    <div class="swiper-slide">
-
-                        <div class="card mb-4 box-shadow">
-                            <div class="card-header">
-                                <h4 class="my-0 font-weight-normal">Free</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-                                <ul class="list-unstyled mt-3 mb-4">
-                                    <li>10 users included</li>
-                                    <li>2 GB of storage</li>
-                                    <li>Email support</li>
-                                    <li>Help center access</li>
-                                </ul>
-                                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- END slaid4 -->
-                    <!-- slaid5 -->
-                    <div class="swiper-slide">
-
-                        <div class="card mb-4 box-shadow">
-                            <div class="card-header">
-                                <h4 class="my-0 font-weight-normal">Pro</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-                                <ul class="list-unstyled mt-3 mb-4">
-                                    <li>20 users included</li>
-                                    <li>10 GB of storage</li>
-                                    <li>Priority email support</li>
-                                    <li>Help center access</li>
-                                </ul>
-                                <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- END slaid5 -->
-                    <!-- slaid6 -->
-                    <div class="swiper-slide">
-
-                        <div class="card mb-4 box-shadow">
-                            <div class="card-header">
-                                <h4 class="my-0 font-weight-normal">Enterprise</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
-                                <ul class="list-unstyled mt-3 mb-4">
-                                    <li>30 users included</li>
-                                    <li>15 GB of storage</li>
-                                    <li>Phone and email support</li>
-                                    <li>Help center access</li>
-                                </ul>
-                                <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- END slaid6 -->
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination" style="bottom: auto;"></div>
-            </div>
-            <!-- END Swiper -->
-        </div>
-    </div>
-    <footer class="footer">
-        <div class="container pb-6">
-            <div class="row">
-                <div class="col footer__first">
-                    <div class="footer__tel">
-                        <a href="tel:+78612387210">
-                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 2.5C16.6778 2.95123 18.2076 3.83538 19.4361 5.06391C20.6646 6.29244 21.5488 7.82221 22 9.5" stroke="#44AF4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M14 5.5C15.1984 5.8223 16.2911 6.45384 17.1686 7.33137C18.0462 8.20889 18.6777 9.30158 19 10.5" stroke="#44AF4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M7.28538 12.5783C8.27932 14.6103 9.92648 16.25 11.963 17.2347C12.112 17.3053 12.2768 17.3359 12.4413 17.3234C12.6057 17.311 12.764 17.256 12.9007 17.1637L15.8994 15.1642C16.032 15.0757 16.1846 15.0218 16.3433 15.0072C16.502 14.9926 16.6619 15.0179 16.8084 15.0806L22.4184 17.4849C22.6089 17.5659 22.768 17.7065 22.8717 17.8858C22.9754 18.065 23.018 18.2731 22.9931 18.4786C22.8158 19.8661 22.1388 21.1414 21.0889 22.0657C20.039 22.99 18.6883 23.4999 17.2895 23.5C12.9692 23.5 8.82595 21.7838 5.77108 18.7289C2.71621 15.674 1 11.5308 1 7.21051C1.00007 5.81174 1.51 4.46096 2.43429 3.41108C3.35858 2.36121 4.63387 1.68423 6.02135 1.50692C6.22691 1.48204 6.43497 1.52464 6.61421 1.6283C6.79345 1.73196 6.93414 1.89106 7.01509 2.08163L9.42145 7.69646C9.48369 7.84169 9.50905 8.00006 9.49527 8.15746C9.4815 8.31487 9.42901 8.46643 9.34248 8.59864L7.34984 11.6433C7.25915 11.7803 7.20554 11.9384 7.19424 12.1023C7.18294 12.2662 7.21434 12.4302 7.28538 12.5783V12.5783Z" stroke="#44AF4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            +7 861 238 72 10
-                        </a>
-                    </div>
-                    <p><strong>Пн-Вс: 9:00 - 20:00</strong></p>
-                    <p>Динской районст.<br>Старомышастовскаяул.<br>Красная 36-А<br>35 км от г. Краснодара</p>
-                    <div class="social-Links d-xl-none">
-                        <a href="https://www.youtube.com/channel/UCT2dbfcFuczRREB7v3lko_g" target="_blank" class="social-Links__item">
-                            <img src="/assets/images/youtube-green.svg" alt="youtube">
-                        </a>
-                        <a href="https://vk.com/familiadental" target="_blank" class="social-Links__item">
-                            <img src="/assets/images/vk-green.svg" alt="vk">
-                        </a>
-                        <a href="https://t.me/familia_dental" target="_blank" class="social-Links__item">
-                            <img src="/assets/images/dzen-green.svg" alt="dzen">
-                        </a>
-                        <a href="https://t.me/familia_dental" target="_blank" class="social-Links__item">
-                            <img src="/assets/images/telegram-green.svg" alt="telegram">
-                        </a>
-                    </div>
-                    <div class="footer__first_btn">
-                        <a class="btn btn-outline-success btn-circle" href="/assets/images/banner_1160x85.jpg" data-fancybox="foto">
-                             Построить маршрут
-                        </a>
-                    </div>
-
-                </div>
-                <div class="col">
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-dark" href="#">О клинике</a></li>
-                        <li><a class="text-dark" href="#">Команда</a></li>
-                        <li><a class="text-dark" href="#">Стоимость</a></li>
-                        <li><a class="text-dark" href="#">Акции</a></li>
-                        <li><a class="text-dark" href="#">Отзывы</a></li>
-                        <li><a class="text-dark" href="#">Истории улыбок</a></li>
-                        <li><a class="text-dark" href="#">Иногродним</a></li>
-                        <li><a class="text-dark" href="#">Статьи</a></li>
-                        <li><a class="text-dark" href="#">Видео</a></li>
-                        <li><a class="text-dark" href="#">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="col footer__menu">
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-dark" href="#">Исправление прикуса</a></li>
-                        <li><a class="text-dark" href="#">Диагностика</a></li>
-                        <li><a class="text-dark" href="#">Хирургическая стоматология</a></li>
-                        <li><a class="text-dark" href="#">Сохранение зубов</a></li>
-                        <li><a class="text-dark" href="#">Профилактика и отбеливание</a></li>
-                        <li><a class="text-dark" href="#">Протезирование</a></li>
-                        <li><a class="text-dark" href="#">Имплантация</a></li>
-                        <li><a class="text-dark" href="#">Калькулятор имплантации</a></li>
-                    </ul>
-                </div>
-                <div class="col footer__menu2">
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-dark" href="#">Юридическая информация</a></li>
-                        <li><a class="text-dark" href="#">Лечение по ДМС</a></li>
-                        <li><a class="text-dark" href="#">Приглашение в “Клуб другей”</a></li>
-                        <li><a class="text-dark" href="#">Учебный центр</a></li>
-                        <li><a class="text-dark" href="#">Заявка на расчет лечения</a></li>
-                    </ul>
-                    <p><a class="btn btn-success btn-circle" href="#" data-toggle="modal" data-target="#exampleModal">Записаться на прием</a></p>
-                    <p><a class="btn btn-outline-success btn-circle" href="https://youtu.be/6VAbxqRaFPE" data-fancybox="laboratory_video">
-                         Спросить по WhatsApp</a></p>
-                </div>
-            </div>
-        </div>
         <div class="container">
-            <div class="row">
-                <div class="col-10">
-                    <p>ООО "Краснодарский медицинский центр" © 2014-2022 | Лицензия предоставления медицинских услуг #34567890-456j<br>Все права защищены. При перепечатке материалов ссылка на сайт обязательна.<br>Информация на сайте не является публичной офертой.</p>
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+                <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                    <i class="bi bi-bootstrap-fill fs-2"></i>
+                </a>
+
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+                </ul>
+
+                <div class="col-md-3 text-end">
+                    <button type="button" class="btn btn-outline-primary me-2">Login</button>
+                    <button type="button" class="btn btn-primary">Sign-up</button>
                 </div>
-                <div class="col-2">
-                    <div class="msf_top"  title="Наверх">
-                        <a href="#" id="scroll_top">
-                            ↑
-                        </a>
+            </header>
+        </div>
+        <div class="container-fluid border-bottom mb-4"></div>
+
+
+        <div class="container pb-3">
+
+            <div class="row align-items-md-stretch">
+                <div class="col-md-3">
+                    <div class="h-100 p-5 text-white bg-dark rounded-3">
+                        <h2>Change the background</h2>
+                        <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="h-100 p-5 bg-light border rounded-3">
+                        <h1>Document</h1>
+                        <p>Смотреть все иконки - <a href="https://icons.bootstrap-5.ru/">Здесь Иконки Bootstrap</a></p>
                     </div>
                 </div>
             </div>
+
+        </div>
+
+        <div class="p-2 mb-4 mt-4 bg-light border">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">Custom jumbotron</h1>
+                <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+                <button class="btn btn-primary btn-lg" type="button">Example button</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
         </div>
     </footer>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Мой текст
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-            </div>
-        </div>
-    </div>
 
-
-    <script src="assets/source/jquery.slim.min.js"></script>
-    <script src="assets/source/bootstrap-v4/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/source/fancybox/fancybox.umd.js"></script>
+    <script src="/assets/source/jquery.slim.min.js"></script>
+    <script src="/assets/source/bootstrap_v5/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/source/fancybox/fancybox.umd.js"></script>
     <script src="/assets/source/swiper/dist/js/swiper.min.js"></script>
-    <script src="assets/js/main.min.js"></script>
+    <script src="/assets/js/main.min.js"></script>
+
 </body>
 </html>
