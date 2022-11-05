@@ -3,19 +3,15 @@ const sass = require('gulp-sass')(require('sass')); // обработчик sass
 const less = require('gulp-less'); // обработчик sass
 const cleanCSS = require('gulp-clean-css') // минифицировать CSS
 const autoprefixer = require('gulp-autoprefixer')// Добавить префиксы
-
 const babel = require('gulp-babel') // поддержка старых версий скриптов
 const uglify = require('gulp-uglify') // сжатие скриптов
 const concat = require('gulp-concat') // переименовать скрипты
-
 const imagemin = require('gulp-imagemin') // сжать фото
 const newer = require('gulp-newer'); // обработка только новых файлов
-
 const sourcemaps = require('gulp-sourcemaps') // карта для css и js
 const rename = require('gulp-rename') // переименовывать файлы
 const del = require('del') // удалять файлы
 const gsize = require('gulp-size') // показать в консоли размер файла
-
 const browserSync = require('browser-sync').create();
 
 const paths = {
@@ -36,7 +32,7 @@ const paths = {
         dest: 'assets/js/'
     },
     images: {
-        src: 'src/img/*',
+        src: 'src/img/**',
         dest: 'assets/images'
     },
     source: {
@@ -95,20 +91,18 @@ function scripts() {
 function images() {
     return gulp.src(paths.images.src)
         .pipe(newer(paths.images.dest))
-        .pipe(imagemin([
+        .pipe(imagemin(
+            [
             imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({progressive: true}),
+            imagemin.mozjpeg({tune: 'ssim',quantTable: 1,progressive: true}),
             imagemin.optipng({optimizationLevel: 5}),
-            imagemin.svgo({
-                plugins: [
-                    {removeViewBox: true},
-                    {cleanupIDs: false}
-                ]
-            })
-        ]))
+            imagemin.svgo({plugins: [{removeViewBox: true},{cleanupIDs: false}]})
+            ],
+            {
+                verbose: true
+            }))
         .pipe(gsize({
-            title:'images',
-            uncompressed:true
+            title:'images'
         }))
         .pipe(gulp.dest(paths.images.dest))
         .pipe(browserSync.stream())
@@ -162,8 +156,8 @@ function watch() {
 
 const build = gulp.series(
     clean,
-    gulp.parallel(images,source,fonts),
-    gulp.parallel(styles,scripts),
+    gulp.parallel(source,fonts),
+    gulp.parallel(styles,scripts,images),
     watch)
 
 exports.clean = clean;
