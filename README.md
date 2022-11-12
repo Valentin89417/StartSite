@@ -3,6 +3,7 @@
 - HTML
 - CSS, SCSS, LESS
 - Java Script, jQuery v3.5.1
+# Подключённые Библиотеки
 - [Bootstrap v5.2.2](https://bootstrap-5.ru/docs/5.2/getting-started/introduction/)
 - [Иконки Bootstrap](https://icons.bootstrap-5.ru/)
 - [Fancybox](https://fancyapps.com/docs/ui/fancybox/)
@@ -25,7 +26,7 @@
 ## Input
 || HTML | Styles | Scripts | Images | Fonts | Source |
 |:---|:------:|:-----:|:----:|:-----:|:-----:|:-----:|
-| **Каталог** | / | src/styles/ | src/scripts/ | src/img/ | src/fonts/ | src/source/ |
+| **Каталог** | / | src/css/ | src/js/ | src/images/ | src/fonts/ | src/source/ |
 | **Расширение** | .html | .css, .less, .sass, .scss | .js | .jpg, .png, .gif, .svg | .ttf, .woff, .woff2 | .* |
 
 ## Output

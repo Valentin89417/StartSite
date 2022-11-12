@@ -1,0 +1,7 @@
+/* @media (min-width: 576px) */
+  @import "_1_header";
+  @import "_16_footer";
+
+// В импортируемых файлах не требуется писать @media (min-width: 576px) функция @include media-breakpoint-up(sm) - сома обернёт ваш код
+// Если написать @media (max-width: 1200px) - Это сгенерироет такую запись пример:
+// @media (min-width: 576px) and (max-width: 1200px)

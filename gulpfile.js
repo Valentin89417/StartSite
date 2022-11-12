@@ -16,23 +16,23 @@ const browserSync = require('browser-sync').create();
 
 const paths = {
     watch: {
-        styles:  ['src/styles/**/*.less','src/styles/**/*.scss','src/styles/**/*.css'],
-        scripts: 'src/scripts/**/*.js',
-        images:  'src/img/**',
+        styles:  ['src/css/**/*.less','src/css/**/*.scss','src/css/**/*.css'],
+        scripts: 'src/js/**/*.js',
+        images:  'src/images/**',
         source:  'src/source/**',
         fonts:   'src/fonts/**',
         html:  '*.html'
     },
     styles: {
-        src: 'src/styles/style.scss',
+        src: 'src/css/style.scss',
         dest: 'assets/css/'
     },
     scripts: {
-        src: 'src/scripts/**/*.js',
+        src: 'src/js/**/*.js',
         dest: 'assets/js/'
     },
     images: {
-        src: 'src/img/**',
+        src: 'src/images/**',
         dest: 'assets/images'
     },
     source: {
