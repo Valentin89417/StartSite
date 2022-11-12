@@ -3,7 +3,7 @@
 
 /* подключение Библиотек */
 @import "../source/bootstrap_v5/scss/bootstrap";
-@import url("../source/bootstrap-icons/font/bootstrap-icons.css");
+@import url("../source/fontawesome6/css/all.min.css");
 @import url("../source/fancybox/fancybox.css");
 @import url("../source/swiper/dist/css/swiper.min.css");
 
@@ -22,4 +22,4 @@
 @import "media_min/style";
 
 /* медиа запросы - Максимальная ширина @media (max-width: ... ) */
-@import "media_max/style";
+//@import "media_max/style";

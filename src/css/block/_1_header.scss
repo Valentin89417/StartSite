@@ -1,0 +1,9 @@
+h1 {
+  position: relative;
+}
+
+h1:before {
+  content: "\f005";
+  font-family: var(--fontawesome6-font-family);
+  //font-weight: 400; // или 900
+}

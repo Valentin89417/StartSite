@@ -1,4 +1,4 @@
-# Сборка проекта на Gulp 4
+gulp# Сборка проекта на Gulp 4
 Быстро настроить сборку вашего проекта на Gulp и писать код на:
 - HTML
 - CSS, SCSS, LESS
@@ -6,27 +6,36 @@
 
 # Подключённые Библиотеки
 - [Bootstrap v5.2.2](https://bootstrap-5.ru/docs/5.2/getting-started/introduction/)
-- [Иконки Bootstrap](https://icons.bootstrap-5.ru/)
+- [Font Awesome 6.2](https://fontawesome.com/search)
 - [Fancybox v4.0.31](https://fancyapps.com/docs/ui/fancybox/)
 - [Swiper v4.5.0](https://swiperjs.com/)
 - [Lazysizes v5.3.1](https://afarkas.github.io/lazysizes/index.html)
 
-
 Пример отложенной загрузки:
-
 ```html
-        <img data-src="/assets/images/top_banner/Trek.png"
-             class="lazyload"
-             loading="lazy"
-             width="1920" height="400" />
-
-        <iframe data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A3fb3fef5c03c80a339db890ce6f4ad78991d710e0774157ed56f30f12d4e2751&amp;source=constructor" 
-                class="lazyload"
-                loading="lazy"
-                width="100%" height="400"
-                frameborder="0">
-        </iframe>
+<!-- Для img -->
+<img data-src="/assets/images/top_banner/Trek.png"
+     class="lazyload"
+     loading="lazy"
+     width="1920" height="400" />
+<!-- Для iframe -->
+<iframe data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A3fb3fef5c03c80a339db890ce6f4ad78991d710e0774157ed56f30f12d4e2751&amp;source=constructor" 
+        class="lazyload"
+        loading="lazy"
+        width="100%" height="400"
+        frameborder="0">
+</iframe>
 ```
+
+Пример вывода иконок в css:
+```html
+h1:before {
+  content: "\f005"; // добовляем Unicode иконки через "\"
+  font-family: var(--fontawesome6-font-family);
+  font-weight: 400; // или 900 изменит начертание
+}
+```
+
 
 ## Функционал сборки
 - компиляция препроцессоров LESS
