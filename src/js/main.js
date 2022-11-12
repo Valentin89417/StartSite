@@ -16,6 +16,8 @@ if ('loading' in HTMLImageElement.prototype) { // Поддерживает loadi
 }
 
 
+/* !!! Примеры - можно удалить !!! */
+
 //  Swiper Top Banner
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 10,
