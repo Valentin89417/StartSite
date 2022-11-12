@@ -2,10 +2,24 @@ Fancybox.bind("[data-fancybox]", {
     // Your options go here
 });
 
+//Настройка отложенной загрузки
+if ('loading' in HTMLImageElement.prototype) { // Поддерживает loading
+    $('img[loading="lazy"],iframe[loading="lazy"]').each( function(){
+        $(this).attr('src', $(this).attr('data-src'));
+    });
+} else { // Не поддерживает loading
+    // Динамически импортируем библиотеку LazySizes
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = '/assets/source/lazysizes/lazysizes.min.js';
+    document.body.appendChild(script);
+}
+
+
 //  Swiper Top Banner
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 10,
-    slidesPerView: 5,
+    slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
 });

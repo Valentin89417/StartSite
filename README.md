@@ -3,11 +3,13 @@
 - HTML
 - CSS, SCSS, LESS
 - Java Script, jQuery v3.5.1
+
 # Подключённые Библиотеки
 - [Bootstrap v5.2.2](https://bootstrap-5.ru/docs/5.2/getting-started/introduction/)
 - [Иконки Bootstrap](https://icons.bootstrap-5.ru/)
 - [Fancybox](https://fancyapps.com/docs/ui/fancybox/)
 - [Swiper](https://swiperjs.com/)
+- [Lazysizes](https://afarkas.github.io/lazysizes/index.html)
 
 ## Функционал сборки
 - компиляция препроцессоров LESS

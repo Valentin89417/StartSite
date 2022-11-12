@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
@@ -27,7 +27,7 @@
 <body class="d-flex flex-column min-vh-100">
 
     <main>
-
+    <!-- Пример блоков-->
         <div class="container">
             <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
                 <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
@@ -49,7 +49,7 @@
             </header>
         </div>
         <div class="container-fluid border-bottom"></div>
-    <!-- Пример блоков-->
+
         <!-- Swiper Top Banner -->
         <div class="swiper mySwiper2"
             style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
@@ -65,9 +65,6 @@
                 </div>
                 <div class="swiper-slide">
                     <img src="/assets/images/top_banner/location-main-page.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/top_banner/Trek.png" />
                 </div>
             </div>
             <div class="swiper-button-next"></div>
@@ -87,12 +84,9 @@
                 <div class="swiper-slide">
                     <img src="/assets/images/top_banner/mini/location-main-page.jpg" />
                 </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/top_banner/mini/Trek.png" />
-                </div>
             </div>
         </div>
-        <!-- END Swiper Top Banner -->
+        <!--END Swiper Top Banner -->
 
         <div class="container my-4">
 
@@ -105,6 +99,7 @@
                             <li><a href="https://icons.bootstrap-5.ru/" target="_blank" rel="nofollow">Иконки Bootstrap</a></li>
                             <li><a href="https://fancyapps.com/docs/ui/fancybox/" target="_blank" rel="nofollow">Fancybox</a></li>
                             <li><a href="https://swiperjs.com/" target="_blank" rel="nofollow">Swiper</a></li>
+                            <li><a href="https://github.com/aFarkas/lazysizes" target="_blank" rel="nofollow">Lazysizes</a></li>
                         </ul>
                     </div>
                 </div>
@@ -112,6 +107,8 @@
                     <div class="h-100 p-5 bg-light border rounded-3">
                         <h1>Источник</h1>
                         <p>Ссылки на документацию - <a href="https://github.com/Valentin89417/StartSite" target="_blank">Здесь</a></p>
+
+                        <p>Подробнее про Отложенную загрузку можно почитать - <a href="https://web.dev/browser-level-image-lazy-loading/" target="_blank">Здесь</a> и <a href="https://habr.com/ru/post/512508/" target="_blank">Здесь</a></p>
                     </div>
                 </div>
             </div>
@@ -229,7 +226,23 @@
 
             </div>
         </div>
-        <!-- END Swiper Slider -->
+        <!--END Swiper Slider -->
+
+
+
+        <!-- Пример Отложенной загрузки -->
+        <img data-src="/assets/images/top_banner/Trek.png"
+             class="lazyload"
+             loading="lazy"
+             width="1920"
+             height="400" />
+
+        <iframe data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A3fb3fef5c03c80a339db890ce6f4ad78991d710e0774157ed56f30f12d4e2751&amp;source=constructor" width="100%" height="400" frameborder="0"
+                class="lazyload"
+                loading="lazy">
+
+        </iframe>
+        <!--END Пример Отложенной загрузки -->
     <!--END Пример блоков-->
     </main>
 
