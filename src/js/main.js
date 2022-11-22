@@ -5,7 +5,7 @@ Fancybox.bind("[data-fancybox]", {
 //Настройка отложенной загрузки
 if ('loading' in HTMLImageElement.prototype) { // Поддерживает loading
     $('img[loading="lazy"],iframe[loading="lazy"]').each( function(){
-        $(this).attr('src', $(this).attr('data-src'));
+        $(this).attr('src', $(this).attr('data-src')).removeAttr('data-src');
     });
 } else { // Не поддерживает loading
     // Динамически импортируем библиотеку LazySizes
