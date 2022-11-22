@@ -84,3 +84,10 @@ body {
   position: relative;
 }
 /* END Swiper */
+img.lazyload {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+img.lazyload[data-src] {
+    opacity: 0;
+}
