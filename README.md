@@ -7,7 +7,7 @@ gulp# Сборка проекта на Gulp 4
 # Подключённые Библиотеки
 - [Bootstrap v5.2.2](https://bootstrap-5.ru/docs/5.2/getting-started/introduction/)
 - [Font Awesome 6.2](https://fontawesome.com/search)
-- [Fancybox v4.0.31](https://fancyapps.com/docs/ui/fancybox/)
+- [Fancybox v4.0.31](https://fancyapps.com/fancybox/)
 - [Swiper v4.5.0](https://swiperjs.com/)
 - [AOS v2.3.1](https://michalsnik.github.io/aos/)
 - [Lazysizes v5.3.1](https://afarkas.github.io/lazysizes/index.html)
