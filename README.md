@@ -9,6 +9,7 @@ gulp# Сборка проекта на Gulp 4
 - [Font Awesome 6.2](https://fontawesome.com/search)
 - [Fancybox v4.0.31](https://fancyapps.com/docs/ui/fancybox/)
 - [Swiper v4.5.0](https://swiperjs.com/)
+- [AOS v2.3.1](https://michalsnik.github.io/aos/)
 - [Lazysizes v5.3.1](https://afarkas.github.io/lazysizes/index.html)
 
 Пример отложенной загрузки:

@@ -2,6 +2,9 @@ Fancybox.bind("[data-fancybox]", {
     // Your options go here
 });
 
+// INITIALIZE AOS
+AOS.init();
+
 //Настройка отложенной загрузки
 if ('loading' in HTMLImageElement.prototype) { // Поддерживает loading
     $('img[loading="lazy"],iframe[loading="lazy"]').each( function(){
