@@ -1,17 +1,18 @@
 /* https://bootstrap-5.ru/docs/5.2/layout/breakpoints/
  медиа запросы - Максимальная ширина @media (max-width: ... ) */
-@include media-breakpoint-down(sm) {
-  @import "1_media-sm/style";
-}/* end sm */
-@include media-breakpoint-down(md) {
-  @import "2_media-md/style";
-}/* end md */
-@include media-breakpoint-down(lg) {
-  @import "3_media-lg/style";
-}/* end lg */
-@include media-breakpoint-down(xl) {
-  @import "4_media-xl/style";
-}/* end xl */
+
 @include media-breakpoint-down(xxl) {
   @import "5_media-xxl/style";
 }/* end xxl */
+@include media-breakpoint-down(xl) {
+  @import "4_media-xl/style";
+}/* end xl */
+@include media-breakpoint-down(lg) {
+  @import "3_media-lg/style";
+}/* end lg */
+@include media-breakpoint-down(md) {
+  @import "2_media-md/style";
+}/* end md */
+@include media-breakpoint-down(sm) {
+  @import "1_media-sm/style";
+}/* end sm */
