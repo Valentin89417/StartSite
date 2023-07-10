@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>Bootstrap · Версия v5.2.2</title>
+<meta name="description" content="Пример на bootstrap 5: Версия v5.2.2">
+
+
+<!-- Styles -->
+<link rel="stylesheet" href="/assets/css/style.min.css">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/images/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/assets/images/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <main>
+    <!-- Пример блоков-->
+        <div class="container">
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <i class="fa-brands fa-linux fs-1"></i>
+    </a>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 link-secondary">+Home</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+    </ul>
+
+    <div class="col-md-3 text-end">
+        <button type="button" class="btn btn-outline-primary me-2">Login</button>
+        <button type="button" class="btn btn-primary">Sign-up</button>
+    </div>
+</header>
+
+        </div>
+        <div class="container-fluid border-bottom"></div>
+
+        <!-- Swiper Top Banner -->
+        <div class="swiper mySwiper2"
+            style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/Abhazia.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/cover-picture.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/k660g11ssu49a.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/location-main-page.jpg" />
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/mini/Abhazia.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/mini/cover-picture.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/mini/k660g11ssu49a.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/mini/location-main-page.jpg" />
+                </div>
+            </div>
+        </div>
+        <!--END Swiper Top Banner -->
+
+        <div class="container my-4">
+
+            <div class="row align-items-md-stretch">
+                <div class="col-md-3">
+                    <div class="h-100 p-5 text-white bg-dark rounded-3">
+                        <h2>Стороннии библиотеки</h2>
+                        <ul dir="auto">
+                            <li><a href="https://bootstrap-5.ru/docs/5.2/getting-started/introduction/" target="_blank" rel="nofollow">Bootstrap v5.2.2</a></li>
+                            <li><a href="https://fontawesome.com/search?o=r&m=free" target="_blank" rel="nofollow">Font Awesome 6.2</a></li>
+                            <li><a href="https://fancyapps.com/docs/ui/fancybox/" target="_blank" rel="nofollow">Fancybox</a></li>
+                            <li><a href="https://swiperjs.com/" target="_blank" rel="nofollow">Swiper</a></li>
+                            <li><a href="https://github.com/aFarkas/lazysizes" target="_blank" rel="nofollow">Lazysizes</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="h-100 p-5 bg-light border rounded-3">
+                        <h1>Источник</h1>
+                        <p>Ссылки на документацию - <a href="https://github.com/Valentin89417/StartSite" target="_blank">Здесь</a></p>
+
+                        <p>Подробнее про Отложенную загрузку можно почитать - <a href="https://web.dev/browser-level-image-lazy-loading/" target="_blank">Здесь</a> и <a href="https://habr.com/ru/post/512508/" target="_blank">Здесь</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Пример Отложенной загрузки -->
+        <img data-src="/assets/images/top_banner/Trek.png"
+             class="lazyload"
+             loading="lazy"
+             width="1920" height="400" />
+
+        <iframe data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A3fb3fef5c03c80a339db890ce6f4ad78991d710e0774157ed56f30f12d4e2751&amp;source=constructor"
+                class="lazyload"
+                loading="lazy"
+                width="100%" height="400"
+                frameborder="0">
+        </iframe>
+        <!--END Пример Отложенной загрузки -->
+    <!--END Пример блоков-->
+    </main>
+
+    <div class="footer bg-light">
+    <footer class="py-5 container">
+        <div class="row">
+            <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Monthly digest of what's new and exciting from us.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 mt-4 border-top">
+            <p>© 2022 Company, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#">
+                    <i class="fa-brands fa-vk fs-2"></i>
+                </a></li>
+                <li class="ms-3"><a class="link-dark" href="#">
+                    <i class="fa-brands fa-youtube fs-2"></i>
+                </a></li>
+
+
+                <li class="ms-3"><a class="link-dark" href="#">
+                    <i class="fa-brands fa-telegram fs-2"></i>
+                </a></li>
+                <li class="ms-3"><a class="link-dark" href="#">
+                    <i class="fa-brands fa-whatsapp fs-2"></i>
+                </a></li>
+                <li class="ms-3 px-3"></li>
+                <li class="ms-3"><a class="link-dark" href="#">
+                    <i class="fa-solid fa-angles-up fs-2"></i>
+                </a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+
+
+<script src="/assets/source/jquery.slim.min.js"></script>
+<script src="/assets/source/bootstrap_v5/dist/js/bootstrap.min.js"></script>
+<script src="/assets/source/fancybox/fancybox.umd.js"></script>
+<script src="/assets/source/swiper/dist/js/swiper.min.js"></script>
+<script src="/assets/source/aos-master/aos.js"></script>
+<script src="/assets/js/main.min.js"></script>
+    <svg width="0" height="0">
+    <!-- создаём SVG c уникальным id -->
+    <symbol viewBox="0 0 32 33" fill="none" id="close">
+        <path d="M25 7.5L7 25.5" stroke="#1D1D1B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M25 25.5L7 7.5" stroke="#1D1D1B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+</svg>
+
+<!-- выводим SVG по id
+<svg width="32" height="33">
+    <use xlink:href="#close"></use>
+</svg>
+-->
+</body>
+</html>

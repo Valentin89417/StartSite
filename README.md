@@ -4,24 +4,14 @@ gulp# Сборка проекта на Gulp 4
 - CSS, SCSS, LESS
 - Java Script, jQuery v3.5.1
 
-# Подключённые Библиотеки
-- [Bootstrap v5.2.2](https://bootstrap-5.ru/docs/5.2/getting-started/introduction/)
-- [Font Awesome 6.2](https://fontawesome.com/search?o=r&m=free&f=brands)
-- [Fancybox v4.0.31](https://fancyapps.com/fancybox/)
-- [Swiper v4.5.0](https://swiperjs.com/)
-- [AOS v2.3.1](https://michalsnik.github.io/aos/)
-- [Lazysizes v5.3.1](https://afarkas.github.io/lazysizes/index.html)
 
-
-
-
-
-## Зупуск:  
+# Зупуск:  
 1. Скачать проект - ```git clone https://github.com/Valentin89417/StartSite.git```  (должен быть установлен [git](https://git-scm.com/downloads))
 2. В терминале перейти в каталог проекта - ```cd StartSite```
 3. Выполнить команду: ```npm i``` (должен быть установлен [node.js](https://nodejs.org/ru/))  
 4. Выполнить команду: ```gulp``` (должен быть установлен [gulp](https://gulpjs.com/docs/en/getting-started/quick-start/))  
 5. Писать свой код и наслаждаться автоматической сборкой проекта.
+
 
 ## Вход
 || HTML | Styles | Scripts | Images | Fonts | Source |
@@ -34,8 +24,16 @@ gulp# Сборка проекта на Gulp 4
 |:---|:------:|:-----:|:----:|:-----:|:-----:|:-----:|
 | **Путь** | / | assets/css/style.min.css | assets/js/ | assets/images/ | assets/fonts/ | assets/source/ |
 
+### Подключённые Библиотеки
+- [Bootstrap v5.2.2](https://bootstrap-5.ru/docs/5.2/getting-started/introduction/)
+- [Font Awesome 6.2](https://fontawesome.com/search?o=r&m=free&f=brands)
+- [Fancybox v4.0.31](https://fancyapps.com/fancybox/)
+- [Swiper v4.5.0](https://swiperjs.com/)
+- [AOS v2.3.1](https://michalsnik.github.io/aos/)
+- [Lazysizes v5.3.1](https://afarkas.github.io/lazysizes/index.html)
 
-## Функционал сборки
+
+### Функционал сборки
 - компиляция препроцессоров LESS
 - компиляция препроцессоров SASS
 - минификация CSS
@@ -51,12 +49,12 @@ gulp# Сборка проекта на Gulp 4
 - импортирует HTML в HTML
 
 
-## Шпоргалка по вёрстке
+# Шпоргалка по вёрстке
 
 #### Пример отложенной загрузки:
 Требуется добавить для img или iframe:
-```class="lazyload" loading="lazy" ```
-и заменить ```src="file"``` на ```data-src="file"```
+```class="lazyload" loading="lazy"```
+и заменить ```src="file"``` на ```data-src="file"``` подробнее читать - [здесь](https://afarkas.github.io/lazysizes/index.html)
 
 ```html
 <!-- Для img -->
@@ -107,10 +105,12 @@ h1:before {
 @@include('include/header.html')
 ```
 так мы импортируем /src/html/include/header.html в свой index.html при генерации он появится в корне проекта и все папки кроме /src/html/include/ .
+Подробнее читать [здесь](https://www.npmjs.com/package/gulp-file-include)
 
 
 #### Изменение стандартной ширины container в  Bootstrap 5:
 src/source/bootstrap_v5/scss/_variables.scss - 450 стр.
+Подробнее читать [здесь](https://bootstrap-5.ru/docs/5.2/layout/breakpoints/)
 
 ## Используемые NPM пакеты
 [gulp](https://www.npmjs.com/package/gulp) Сборщик Gulp  
