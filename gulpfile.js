@@ -13,6 +13,7 @@ const rename = require('gulp-rename') // переименовывать файл
 const del = require('del') // удалять файлы
 const gsize = require('gulp-size') // показать в консоли размер файла
 const browserSync = require('browser-sync').create();
+const fileinclude = require('gulp-file-include');
 
 const paths = {
     watch: {
@@ -21,7 +22,12 @@ const paths = {
         images:  'src/images/**',
         source:  'src/source/**',
         fonts:   'src/fonts/**',
-        html:  '*.html'
+        html:    'src/html/**/*.html'
+    },
+    html: {
+        src: ['src/html/**/*.html','!src/html/include/**/*.html'],
+        dest: './'
+
     },
     styles: {
         src: 'src/css/style.scss',
@@ -129,10 +135,15 @@ function fonts() {
 }
 
 function html() {
-    return gulp.src(paths.watch.html)
+    return gulp.src(paths.html.src)
         .pipe(gsize({
             title:'html'
         }))
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(gulp.dest(paths.html.dest))
         .pipe(browserSync.stream())
 }
 
@@ -156,7 +167,7 @@ function watch() {
 
 const build = gulp.series(
     clean,
-    gulp.parallel(source,fonts),
+    gulp.parallel(source,fonts,html),
     gulp.parallel(styles,scripts,images),
     watch)
 

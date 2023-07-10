@@ -12,30 +12,27 @@ gulp# Сборка проекта на Gulp 4
 - [AOS v2.3.1](https://michalsnik.github.io/aos/)
 - [Lazysizes v5.3.1](https://afarkas.github.io/lazysizes/index.html)
 
-Пример отложенной загрузки:
-```html
-<!-- Для img -->
-<img data-src="/assets/images/top_banner/Trek.png"
-     class="lazyload"
-     loading="lazy"
-     width="1920" height="400" />
-<!-- Для iframe -->
-<iframe data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A3fb3fef5c03c80a339db890ce6f4ad78991d710e0774157ed56f30f12d4e2751&amp;source=constructor" 
-        class="lazyload"
-        loading="lazy"
-        width="100%" height="400"
-        frameborder="0">
-</iframe>
-```
 
-Пример вывода иконок в css:
-```html
-h1:before {
-  content: "\f005"; // добовляем Unicode иконки через "\"
-  font-family: var(--fontawesome6-font-family);
-  font-weight: 400; // или 900 изменит начертание
-}
-```
+
+
+
+## Зупуск:  
+1. Скачать проект - git clone https://github.com/Valentin89417/StartSite.git  (должен быть установлен [git](https://git-scm.com/downloads))
+2. В терминале перейти в каталог проекта - cd StartSite
+3. Выполнить команду: npm i (должен быть установлен [node.js](https://nodejs.org/ru/))  
+4. Выполнить команду: gulp (должен быть установлен [gulp](https://gulpjs.com/docs/en/getting-started/quick-start/))  
+5. Писать свой код и наслаждаться автоматической сборкой проекта.
+
+## Вход
+|| HTML | Styles | Scripts | Images | Fonts | Source |
+|:---|:------:|:-----:|:----:|:-----:|:-----:|:-----:|
+| **Каталог** | src/html/ | src/css/ | src/js/ | src/images/ | src/fonts/ | src/source/ |
+| **Расширение** | .html | .css, .less, .sass, .scss | .js | .jpg, .png, .gif, .svg | .ttf, .woff, .woff2 | .* |
+
+## Выход
+|| HTML | CSS | JavaScript | Images | Fonts | Source |
+|:---|:------:|:-----:|:----:|:-----:|:-----:|:-----:|
+| **Путь** | / | assets/css/style.min.css | assets/js/ | assets/images/ | assets/fonts/ | assets/source/ |
 
 
 ## Функционал сборки
@@ -51,24 +48,69 @@ h1:before {
 - отслеживание изменений в файлах и автоматический запуск повторной обработки
 - генерация sourcemaps
 - отображение размеров файлов в терминале
+- импортирует HTML в HTML
 
-## Input
-|| HTML | Styles | Scripts | Images | Fonts | Source |
-|:---|:------:|:-----:|:----:|:-----:|:-----:|:-----:|
-| **Каталог** | / | src/css/ | src/js/ | src/images/ | src/fonts/ | src/source/ |
-| **Расширение** | .html | .css, .less, .sass, .scss | .js | .jpg, .png, .gif, .svg | .ttf, .woff, .woff2 | .* |
 
-## Output
-|| HTML | CSS | JavaScript | Images | Fonts | Source |
-|:---|:------:|:-----:|:----:|:-----:|:-----:|:-----:|
-| **Путь** | / | assets/css/style.min.css | assets/js/ | assets/images/ | assets/fonts/ | assets/source/ |
+## Шпоргалка по вёрстке
 
-## Зупуск:  
-1. Скачать все файлы проекта  
-2. В терминале перейти в каталог проекта  
-3. Выполнить команду: npm i (должен быть установлен [node.js](https://nodejs.org/ru/))  
-4. Выполнить команду: gulp (должен быть установлен [gulp](https://gulpjs.com/docs/en/getting-started/quick-start/))  
-5. Писать свой код и наслаждаться автоматической сборкой проекта. 
+#### Пример отложенной загрузки:
+Требуется добавить для img или iframe:
+```html class="lazyload" loading="lazy" ```
+и заменить ```html src="file" ``` на ```html data-src="file" ```
+
+```html
+<!-- Для img -->
+<img data-src="/assets/images/top_banner/Trek.png"
+     class="lazyload"
+     loading="lazy"
+     width="1920" height="400" />
+<!-- Для iframe -->
+<iframe data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A3fb3fef5c03c80a339db890ce6f4ad78991d710e0774157ed56f30f12d4e2751&amp;source=constructor" 
+        class="lazyload"
+        loading="lazy"
+        width="100%" height="400"
+        frameborder="0">
+</iframe>
+```
+
+
+#### Пример вывода иконок Font Awesome в css:
+```css
+h1:before {
+  content: "\f005"; // добовляем Unicode иконки через "\"
+  font-family: var(--fontawesome6-font-family);
+  font-weight: 400; // или 900 изменит начертание
+}
+```
+
+
+#### Пример загрузки svg:
+```html
+<svg width="0" height="0">
+    <!-- создаём SVG c уникальным id -->
+    <symbol viewBox="0 0 32 33" fill="none" id="close">
+        <path d="M25 7.5L7 25.5" stroke="#1D1D1B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M25 25.5L7 7.5" stroke="#1D1D1B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+</svg>
+
+<!-- выводим SVG по id -->
+<svg width="32" height="33">
+    <use xlink:href="#close"></use>
+</svg>
+```
+
+
+#### Пример импорта HTML:
+В /src/html/index.html пишем
+```html
+@@include('include/header.html')
+```
+так мы импортируем /src/html/include/header.html в свой index.html при генерации он появится в корне проекта и все папки кроме /src/html/include/ .
+
+
+#### Изменение стандартной ширины container в  Bootstrap 5:
+src/source/bootstrap_v5/scss/_variables.scss - 450 стр.
 
 ## Используемые NPM пакеты
 [gulp](https://www.npmjs.com/package/gulp) Сборщик Gulp  
@@ -88,6 +130,7 @@ h1:before {
 [gulp-newer](https://www.npmjs.com/package/gulp-newer) Отслеживание только новых файлов  
 [gulp-rename](https://www.npmjs.com/package/gulp-rename) Переименовывает файлы    
 [gulp-size](https://www.npmjs.com/package/gulp-size) Отображение информации о размерах файлов в терминале  
+[gulp-file-include](https://www.npmjs.com/package/gulp-file-include) Импорт html в html  
 
 
 ### Контакты

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    @@include_once('include/head.html')
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <main>
+    <!-- Пример блоков-->
+        <div class="container">
+            @@include_once('include/header.html')
+
+        </div>
+        <div class="container-fluid border-bottom"></div>
+
+        <!-- Swiper Top Banner -->
+        <div class="swiper mySwiper2"
+            style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/Abhazia.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/cover-picture.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/k660g11ssu49a.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/location-main-page.jpg" />
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/mini/Abhazia.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/mini/cover-picture.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/mini/k660g11ssu49a.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/top_banner/mini/location-main-page.jpg" />
+                </div>
+            </div>
+        </div>
+        <!--END Swiper Top Banner -->
+
+        <div class="container my-4">
+
+            <div class="row align-items-md-stretch">
+                <div class="col-md-3">
+                    <div class="h-100 p-5 text-white bg-dark rounded-3">
+                        <h2>Стороннии библиотеки</h2>
+                        <ul dir="auto">
+                            <li><a href="https://bootstrap-5.ru/docs/5.2/getting-started/introduction/" target="_blank" rel="nofollow">Bootstrap v5.2.2</a></li>
+                            <li><a href="https://fontawesome.com/search?o=r&m=free" target="_blank" rel="nofollow">Font Awesome 6.2</a></li>
+                            <li><a href="https://fancyapps.com/docs/ui/fancybox/" target="_blank" rel="nofollow">Fancybox</a></li>
+                            <li><a href="https://swiperjs.com/" target="_blank" rel="nofollow">Swiper</a></li>
+                            <li><a href="https://github.com/aFarkas/lazysizes" target="_blank" rel="nofollow">Lazysizes</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="h-100 p-5 bg-light border rounded-3">
+                        <h1>Источник</h1>
+                        <p>Ссылки на документацию - <a href="https://github.com/Valentin89417/StartSite" target="_blank">Здесь</a></p>
+
+                        <p>Подробнее про Отложенную загрузку можно почитать - <a href="https://web.dev/browser-level-image-lazy-loading/" target="_blank">Здесь</a> и <a href="https://habr.com/ru/post/512508/" target="_blank">Здесь</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Пример Отложенной загрузки -->
+        <img data-src="/assets/images/top_banner/Trek.png"
+             class="lazyload"
+             loading="lazy"
+             width="1920" height="400" />
+
+        <iframe data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A3fb3fef5c03c80a339db890ce6f4ad78991d710e0774157ed56f30f12d4e2751&amp;source=constructor"
+                class="lazyload"
+                loading="lazy"
+                width="100%" height="400"
+                frameborder="0">
+        </iframe>
+        <!--END Пример Отложенной загрузки -->
+    <!--END Пример блоков-->
+    </main>
+
+    @@include_once('include/footer.html')
+    @@include_once('include/svg.html')
+</body>
+</html>

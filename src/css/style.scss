@@ -14,8 +14,7 @@
 
 /* xs */
 // Нет необходимости в медиа-запросе для контрольной точки xs, так как это = `@media (min-width: 0) { ... }`
-@import "block/_1_header";
-@import "block/_16_footer";
+@import "block/style";
 
 /* https://bootstrap-5.ru/docs/5.2/layout/breakpoints/
  По максимуму писать стили в min-width
@@ -23,4 +22,4 @@
 @import "media_min/style";
 
 /* медиа запросы - Максимальная ширина @media (max-width: ... ) */
-//@import "media_max/style";
+@import "media_max/style";
