@@ -17,10 +17,10 @@ gulp# Сборка проекта на Gulp 4
 
 
 ## Зупуск:  
-1. Скачать проект - git clone https://github.com/Valentin89417/StartSite.git  (должен быть установлен [git](https://git-scm.com/downloads))
-2. В терминале перейти в каталог проекта - cd StartSite
-3. Выполнить команду: npm i (должен быть установлен [node.js](https://nodejs.org/ru/))  
-4. Выполнить команду: gulp (должен быть установлен [gulp](https://gulpjs.com/docs/en/getting-started/quick-start/))  
+1. Скачать проект - ```html git clone https://github.com/Valentin89417/StartSite.git ```  (должен быть установлен [git](https://git-scm.com/downloads))
+2. В терминале перейти в каталог проекта - ```html cd StartSite ```
+3. Выполнить команду: ```html npm i ``` (должен быть установлен [node.js](https://nodejs.org/ru/))  
+4. Выполнить команду: ```html gulp ``` (должен быть установлен [gulp](https://gulpjs.com/docs/en/getting-started/quick-start/))  
 5. Писать свой код и наслаждаться автоматической сборкой проекта.
 
 ## Вход
