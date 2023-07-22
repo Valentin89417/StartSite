@@ -4,13 +4,11 @@
     @@include_once('include/head.html')
 </head>
 <body class="d-flex flex-column min-vh-100">
-
     <main>
-    <!-- Пример блоков-->
-        <div class="container">
-            @@include_once('include/header.html')
+        @@include_once('include/header.html')
 
-        </div>
+
+    <!-- Пример блоков - можно удалить -->
         <div class="container-fluid border-bottom"></div>
 
         <!-- Swiper Top Banner -->
@@ -70,8 +68,6 @@
                     <div class="h-100 p-5 bg-light border rounded-3">
                         <h1>Источник</h1>
                         <p>Ссылки на документацию - <a href="https://github.com/Valentin89417/StartSite" target="_blank">Здесь</a></p>
-
-                        <p>Подробнее про Отложенную загрузку можно почитать - <a href="https://web.dev/browser-level-image-lazy-loading/" target="_blank">Здесь</a> и <a href="https://habr.com/ru/post/512508/" target="_blank">Здесь</a></p>
                     </div>
                 </div>
             </div>
@@ -80,7 +76,7 @@
 
         <!-- Пример Отложенной загрузки -->
         <img data-src="/assets/images/top_banner/Trek.png"
-             class="lazyload"
+             class="lazyload w-100"
              loading="lazy"
              width="1920" height="400" />
 
@@ -91,7 +87,7 @@
                 frameborder="0">
         </iframe>
         <!--END Пример Отложенной загрузки -->
-    <!--END Пример блоков-->
+    <!--END Пример блоков - можно удалить -->
     </main>
 
     @@include_once('include/footer.html')
