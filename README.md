@@ -34,7 +34,6 @@ gulp# Сборка проекта на Gulp 4
 
 
 ### Функционал сборки
-- компиляция препроцессоров LESS
 - компиляция препроцессоров SASS
 - минификация CSS
 - автоматическое добавление префиксов CSS
@@ -102,9 +101,13 @@ h1:before {
 #### Пример импорта HTML:
 В /src/html/index.html пишем
 ```html
-@@include('include/header.html')
+@@include('import/header.html')
+<!-- END HEADER -->
+# ваш код
+<!-- FOOTER -->
+@@include('import/footer.html')
 ```
-так мы импортируем /src/html/include/header.html в свой index.html при генерации он появится в корне проекта и все папки кроме /src/html/include/ .
+так мы импортируем /src/html/import/header.html и /src/html/import/footer.html в свой index.html при генерации он появится в корне проекта и все папки кроме /src/html/import/ .
 Подробнее читать [здесь](https://www.npmjs.com/package/gulp-file-include)
 
 

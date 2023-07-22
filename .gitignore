@@ -1,5 +1,22 @@
-/node_modules
-/assets
-/.idea
-/.git
+# Node artifact files
+node_modules/
+assets/
+*.html
+!src/html/**/*.html
+
+# JetBrains IDE
+.idea/
+
+# GULP
 package-lock.json
+
+# Log files
+*.log
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv

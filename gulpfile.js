@@ -1,6 +1,5 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')(require('sass')); // обработчик sass
-const less = require('gulp-less'); // обработчик sass
 const cleanCSS = require('gulp-clean-css') // минифицировать CSS
 const autoprefixer = require('gulp-autoprefixer')// Добавить префиксы
 const babel = require('gulp-babel') // поддержка старых версий скриптов
@@ -42,7 +41,13 @@ const paths = {
         dest: 'assets/images'
     },
     source: {
-        src: 'src/source/**',
+        src: [
+            'src/source/**',
+            '!src/source/bootstrap_v5/js/**',
+            '!src/source/bootstrap_v5/scss/**',
+            '!src/source/bootstrap_v5/dist/css/**',
+            '!**/README.md',
+        ],
         dest: 'assets/source'
     },
     fonts: {
