@@ -1,8 +1,8 @@
 gulp# Сборка проекта на Gulp 4
 Быстро настроить сборку вашего проекта на Gulp и писать код на:
 - HTML
-- CSS, SCSS, LESS
-- Java Script, jQuery v3.5.1
+- CSS, SASS, SCSS
+- Java Script, jQuery v3.5
 
 
 # Зупуск:  
@@ -17,7 +17,7 @@ gulp# Сборка проекта на Gulp 4
 || HTML | Styles | Scripts | Images | Fonts | Source |
 |:---|:------:|:-----:|:----:|:-----:|:-----:|:-----:|
 | **Каталог** | src/html/ | src/css/ | src/js/ | src/images/ | src/fonts/ | src/source/ |
-| **Расширение** | .html | .css, .less, .sass, .scss | .js | .jpg, .png, .gif, .svg | .ttf, .woff, .woff2 | .* |
+| **Расширение** | .html | .css, .sass, .scss | .js | .jpg, .png, .gif, .svg | .ttf, .woff, .woff2 | .* |
 
 ## Выход
 || HTML | CSS | JavaScript | Images | Fonts | Source |
@@ -116,8 +116,7 @@ src/source/bootstrap_v5/scss/_variables.scss - 450 стр.
 Подробнее читать [здесь](https://bootstrap-5.ru/docs/5.2/layout/breakpoints/)
 
 ## Используемые NPM пакеты
-[gulp](https://www.npmjs.com/package/gulp) Сборщик Gulp  
-[gulp-less](https://www.npmjs.com/package/gulp-less) Компиляция Less файлов  
+[gulp](https://www.npmjs.com/package/gulp) Сборщик Gulp
 [sass](https://www.npmjs.com/package/sass) Компилятор Sass  
 [gulp-sass](https://www.npmjs.com/package/gulp-sass) Компиляция Sass и Scss файлов  
 [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) Сжатие и оптимизация Java Script кода  
