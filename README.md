@@ -115,6 +115,11 @@ h1:before {
 src/source/bootstrap_v5/scss/_variables.scss - 450 стр.
 Подробнее читать [здесь](https://bootstrap-5.ru/docs/5.2/layout/breakpoints/)
 
+
+#### БЕМ - Быстрый старт:
+Подробнее читать [здесь](https://ru.bem.info/methodology/quick-start/)
+
+
 ## Используемые NPM пакеты
 [gulp](https://www.npmjs.com/package/gulp) Сборщик Gulp
 [sass](https://www.npmjs.com/package/sass) Компилятор Sass  
